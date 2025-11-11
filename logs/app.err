@@ -1,0 +1,8 @@
+nohup: ignoring input
+2025-11-11 02:56:55.621 | INFO     | process_logs:process_logs:219 - Starting log processing with 7 workers
+2025-11-11 02:56:55.622 | INFO     | process_logs:process_logs:227 - Found 1 log files, calculating hashes
+2025-11-11 02:56:55.674 | INFO     | process_logs:load_cache:71 - No existing process cache found, starting fresh
+2025-11-11 02:56:55.675 | INFO     | process_logs:process_logs:249 - Processing 1 new files
+2025-11-11 02:56:55.695 | INFO     | process_logs:process_logs:267 - Saving cache
+2025-11-11 02:56:55.696 | INFO     | process_logs:save_cache:86 - Saved process cache with 1 file hashes
+2025-11-11 02:56:55.696 | INFO     | process_logs:process_logs:271 - Successfully processed logs in 0.07 seconds
