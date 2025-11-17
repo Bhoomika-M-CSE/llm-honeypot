@@ -216,6 +216,15 @@
       </div>
     </div>
 
+<!-- Honeypot Logs Section -->
+<section class="bg-gray-800 rounded-lg p-6 shadow-lg mb-12 border border-green-500/50">
+  <h2 class="text-3xl font-bold text-green-300 mb-4">Recent Honeypot Logs</h2>
+  <div style="background:#000; color:#0f0; padding:10px; height:300px; overflow-y:scroll; font-family:monospace; border:1px solid #444;">
+    {{ honeypot_logs | safe }}
+  </div>
+</section>
+
+
     <!-- Ongoing Research -->
     <section class="bg-gray-800 rounded-lg p-6 shadow-lg mb-8">
       <h2 class="text-3xl font-bold text-blue-300 mb-4">Ongoing Research</h2>

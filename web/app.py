@@ -7,7 +7,7 @@ from generate_html import generate_html_files
 from process_logs import process_logs
 
 # Get configuration from environment variables
-LOG_DIRECTORY = Path(os.getenv("LOG_DIRECTORY", "/home/cowrie/cowrie/var/log/cowrie"))
+LOG_DIRECTORY = Path(os.getenv("LOG_DIRECTORY", "/root/llm-honeypot/logs"))
 STATS_FILE = Path(os.getenv("STATS_FILE", "/data/stats/honeypot_stats.json"))
 PROCESSING_INTERVAL = int(os.getenv("PROCESSING_INTERVAL", 1800))  # 30 minutes
 OUTPUT_DIR = Path(os.getenv("OUTPUT_DIR", "/www"))

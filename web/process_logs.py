@@ -17,7 +17,7 @@ from loguru import logger
 from _types import FileHash, HoneypotState, LogFile
 
 # Configuration from environment variables
-LOG_DIRECTORY = Path(os.getenv("LOG_DIRECTORY", "/home/cowrie/cowrie/var/log/cowrie"))
+LOG_DIRECTORY = Path(os.getenv("LOG_DIRECTORY", "/root/llm-honeypot/logs"))
 GEOIP_DB_PATH = Path(os.getenv("GEOIP_DB_PATH", "GeoLite2-Country.mmdb"))
 CACHE_FILE = Path(os.getenv("CACHE_FILE", "/data/stats/honeypot_cache.json"))
 PARALLEL_WORKERS = int(

@@ -1,3 +1,9 @@
 *.egg-info
 .venv
 .ruff_cache
+__pycache__/
+venv/
+logs/*.log
+logs/*.json
+logs/*.jsonl
+

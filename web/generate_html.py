@@ -14,8 +14,21 @@ TEMPLATE_SETS = [
 def generate_html_files(state):
     """Generate HTML files from templates using the state data for each template set."""
 
-    # Use the prepare_template_data method to get template-ready data
+    # Prepare data normally
     context = state.prepare_template_data()
+
+    # ------------------------------
+    # 🔥 NEW: Read honeypot logs
+    # ------------------------------
+    log_file = "/root/llm-honeypot/logs/honeypot.log"
+
+    if os.path.exists(log_file):
+        with open(log_file, "r") as f:
+            lines = f.readlines()[-30:]  # last 30 lines
+        context["honeypot_logs"] = "<br>".join(line.strip() for line in lines)
+    else:
+        context["honeypot_logs"] = "No honeypot logs found."
+    # ------------------------------
 
     for template_set in TEMPLATE_SETS:
         template_dir = os.path.join(TEMPLATE_DIR, template_set)
@@ -35,3 +48,4 @@ def generate_html_files(state):
         output = template.render(**context)
         with open(os.path.join(output_subdir, "explainer.html"), "w") as f:
             f.write(output)
+
